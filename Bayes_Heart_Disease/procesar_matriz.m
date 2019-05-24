@@ -3,6 +3,7 @@ heart2(:,13) = heart(:,14)
 
 heart2 = heart2 + 1
 heart_normalized = normalize_matrix(heart2(:,1:12),4)
+heart_normalized = heart_normalized + 1
 heart_normalized(:,13) = heart2(:,13)
 
 Train = heart_normalized(1:131,1:13)

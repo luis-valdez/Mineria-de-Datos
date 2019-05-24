@@ -1,0 +1,17 @@
+%Separar HD y noHD :P
+map_noHD=Train(:,13)==1;
+noHD = Train_Puro(map_noHD,:);
+map_HD = Train(:,13)==2;
+HD = Train_Puro(map_HD,:);
+
+%Graficar todos los noHD
+for i = 1 : size(Train_Puro,2)
+    figure(i)
+    plot(noHD(:,i), '*')
+end
+
+%Graficar todos los HD
+for i = 1 : size(Train_Puro,2)
+    figure(i)
+    plot(HD(:,i), '*')
+end
